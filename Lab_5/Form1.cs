@@ -15,7 +15,6 @@ namespace Lab_5
         public Form1()
         {
             InitializeComponent();
-        
         }
 
         private void button3_Click(object sender, EventArgs e)
