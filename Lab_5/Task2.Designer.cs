@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Drawing;
 
 namespace Lab_5
@@ -21,11 +22,9 @@ namespace Lab_5
         Bitmap bmp_g_l;
         Bitmap bmp_b_l;
         Bitmap bmp_r_l;
-        Bitmap[] up = new Bitmap[3];
-        Bitmap[] down = new Bitmap[3];
-        Bitmap[] right = new Bitmap[3];
-        Bitmap[] left = new Bitmap[3];
         Random rand;
+        static int podejscie = 0;
+        Stopwatch watch = new Stopwatch();
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -92,6 +91,7 @@ namespace Lab_5
             // 
             // timer1
             // 
+            this.timer1.Enabled = true;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // Task2
@@ -106,6 +106,7 @@ namespace Lab_5
             this.Name = "Task2";
             this.Size = new System.Drawing.Size(1255, 795);
             this.Load += new System.EventHandler(this.Task2_Load);
+            this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.Key_Press);
             this.ResumeLayout(false);
 
         }

@@ -14,7 +14,9 @@ namespace Lab_5
     {
         public Task2()
         {
-            InitializeComponent(); 
+            InitializeComponent();
+            rand = new Random();
+            timer1.Interval = rand.Next(3000, 7000);
         }
 
         private void Task2_Load(object sender, EventArgs e)
@@ -60,20 +62,12 @@ namespace Lab_5
             bmp_r_r = new Bitmap(red_arrow, 70, 70);
             bmp_r_r.RotateFlip(RotateFlipType.Rotate90FlipX);
 
-            //Przypożadkowanie do tablic
-            Bitmap[] up = { bmp_b_u , bmp_b_u , bmp_r_u };
-            Bitmap[] downn = { bmp_b_d, bmp_b_d, bmp_r_d };
-            Bitmap[] right = { bmp_b_r, bmp_b_r, bmp_r_r };
-            Bitmap[] left = { bmp_b_l, bmp_b_l, bmp_r_l };
-
             /*
             this.panel1.BackgroundImage = bmp_g_u;
             this.panel2.BackgroundImage = bmp_g_d;
             this.panel3.BackgroundImage = bmp_g_r;
             this.panel4.BackgroundImage = bmp_g_l;
             */
-
-            this.timer1.Interval = rand.Next(3000, 7000);
 
 
         }
@@ -87,6 +81,84 @@ namespace Lab_5
             {
                 y = rand.Next(3);
             } while (y == x);
+
+            //Pierwsza zmiana
+
+            if (x == 0)
+            {
+                this.panel1.BackgroundImage = bmp_g_u;
+            }
+            else if(x == 1)
+            {
+                this.panel2.BackgroundImage = bmp_g_d;
+            }
+            else if (x == 2)
+            {
+                this.panel3.BackgroundImage = bmp_g_r;
+            }
+            else if (x == 3)
+            {
+                this.panel4.BackgroundImage = bmp_g_l;
+            }
+
+            //Druga zmiana
+
+            if (y == 0)
+            {
+                //int i = rand.Next(1,2);
+                this.panel1.BackgroundImage = bmp_r_u;
+            }
+            else if (y == 1)
+            {
+                //int i = rand.Next(1,2);
+                this.panel2.BackgroundImage = bmp_r_d;
+            }
+            else if (y == 2)
+            {
+                //int i = rand.Next(1,2);
+                this.panel3.BackgroundImage = bmp_r_r;
+            }
+            else if (y == 3)
+            {
+                //int i = rand.Next(1,2);
+                this.panel4.BackgroundImage = bmp_r_l;
+            }
+
+            watch.Start();
+
+
+
+
+
+
+
+        }//Timer
+
+        private void Key_Press(object sender, KeyPressEventArgs e)
+        {
+            if ((panel1.BackgroundImage == bmp_g_u && e.KeyChar=='w') || (panel2.BackgroundImage == bmp_g_d && e.KeyChar == 's') || (panel3.BackgroundImage == bmp_g_r && e.KeyChar == 'd') || (panel4.BackgroundImage == bmp_g_l && e.KeyChar == 'a'))
+            {
+                podejscie++;
+            }
+            else
+            {
+                podejscie = 0;
+                MessageBox.Show("Błąd. Zacznij od nowa");
+            }
+
+            watch.Stop();
+
+            //Ustawienie poczatkowe
+            this.panel1.BackgroundImage = bmp_b_u;
+            this.panel2.BackgroundImage = bmp_b_d;
+            this.panel3.BackgroundImage = bmp_b_r;
+            this.panel4.BackgroundImage = bmp_b_l;
+            timer1.Start();
+
         }
-    }
-}
+
+
+
+
+    }//Task2
+}//pacage
