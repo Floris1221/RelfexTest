@@ -105,22 +105,18 @@ namespace Lab_5
 
             if (y == 0)
             {
-                //int i = rand.Next(1,2);
                 this.panel1.BackgroundImage = bmp_r_u;
             }
             else if (y == 1)
             {
-                //int i = rand.Next(1,2);
                 this.panel2.BackgroundImage = bmp_r_d;
             }
             else if (y == 2)
             {
-                //int i = rand.Next(1,2);
                 this.panel3.BackgroundImage = bmp_r_r;
             }
             else if (y == 3)
             {
-                //int i = rand.Next(1,2);
                 this.panel4.BackgroundImage = bmp_r_l;
             }
 
