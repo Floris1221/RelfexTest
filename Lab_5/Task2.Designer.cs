@@ -103,6 +103,7 @@ namespace Lab_5
             this.Controls.Add(this.panel3);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
+            this.Enabled = false;
             this.Name = "Task2";
             this.Size = new System.Drawing.Size(1255, 795);
             this.Load += new System.EventHandler(this.Task2_Load);

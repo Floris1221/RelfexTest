@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Diagnostics;
 using System.Drawing;
+using System.Windows.Forms;
 
 namespace Lab_5
 {
@@ -10,6 +11,42 @@ namespace Lab_5
         Random rand = new Random();
         Stopwatch watch = new Stopwatch();
         public int zielony;
+        public int figura;
+        PictureBox[] picbox;
+        int proba;
+
+        //Drawing
+        Drawing dr1;
+        Drawing dr2;
+        Drawing dr3;
+        Drawing dr4;
+        Drawing dr5;
+        Drawing dr6;
+        Drawing dr7;
+        Drawing dr8;
+        Drawing dr9;
+        Drawing dr10;
+        Drawing dr11;
+        Drawing dr12;
+        Drawing dr13;
+        Drawing dr14;
+        Drawing dr15;
+        Drawing dr16;
+        Drawing dr17;
+        Drawing dr18;
+        Drawing dr19;
+        Drawing dr20;
+        Drawing dr21;
+        Drawing dr22;
+        Drawing dr23;
+        Drawing dr24;
+        Drawing dr25;
+        Drawing dr26;
+        Drawing dr27;
+        Drawing dr28;
+        Drawing dr29;
+        Drawing dr30;
+
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
@@ -66,6 +103,7 @@ namespace Lab_5
             this.pictureBox29 = new System.Windows.Forms.PictureBox();
             this.pictureBox30 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
@@ -105,6 +143,7 @@ namespace Lab_5
             this.pictureBox1.Size = new System.Drawing.Size(153, 113);
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
+            this.pictureBox1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox2
             // 
@@ -113,6 +152,7 @@ namespace Lab_5
             this.pictureBox2.Size = new System.Drawing.Size(153, 113);
             this.pictureBox2.TabIndex = 0;
             this.pictureBox2.TabStop = false;
+            this.pictureBox2.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox3
             // 
@@ -121,6 +161,7 @@ namespace Lab_5
             this.pictureBox3.Size = new System.Drawing.Size(153, 113);
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
+            this.pictureBox3.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox4
             // 
@@ -129,6 +170,7 @@ namespace Lab_5
             this.pictureBox4.Size = new System.Drawing.Size(153, 113);
             this.pictureBox4.TabIndex = 0;
             this.pictureBox4.TabStop = false;
+            this.pictureBox4.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox5
             // 
@@ -137,6 +179,7 @@ namespace Lab_5
             this.pictureBox5.Size = new System.Drawing.Size(153, 113);
             this.pictureBox5.TabIndex = 0;
             this.pictureBox5.TabStop = false;
+            this.pictureBox5.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox6
             // 
@@ -145,6 +188,7 @@ namespace Lab_5
             this.pictureBox6.Size = new System.Drawing.Size(153, 113);
             this.pictureBox6.TabIndex = 0;
             this.pictureBox6.TabStop = false;
+            this.pictureBox6.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox7
             // 
@@ -153,6 +197,7 @@ namespace Lab_5
             this.pictureBox7.Size = new System.Drawing.Size(153, 113);
             this.pictureBox7.TabIndex = 0;
             this.pictureBox7.TabStop = false;
+            this.pictureBox7.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox8
             // 
@@ -161,6 +206,7 @@ namespace Lab_5
             this.pictureBox8.Size = new System.Drawing.Size(153, 113);
             this.pictureBox8.TabIndex = 0;
             this.pictureBox8.TabStop = false;
+            this.pictureBox8.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox9
             // 
@@ -169,6 +215,7 @@ namespace Lab_5
             this.pictureBox9.Size = new System.Drawing.Size(153, 113);
             this.pictureBox9.TabIndex = 0;
             this.pictureBox9.TabStop = false;
+            this.pictureBox9.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox10
             // 
@@ -177,6 +224,7 @@ namespace Lab_5
             this.pictureBox10.Size = new System.Drawing.Size(153, 113);
             this.pictureBox10.TabIndex = 0;
             this.pictureBox10.TabStop = false;
+            this.pictureBox10.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox11
             // 
@@ -185,6 +233,7 @@ namespace Lab_5
             this.pictureBox11.Size = new System.Drawing.Size(153, 113);
             this.pictureBox11.TabIndex = 0;
             this.pictureBox11.TabStop = false;
+            this.pictureBox11.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox12
             // 
@@ -193,6 +242,7 @@ namespace Lab_5
             this.pictureBox12.Size = new System.Drawing.Size(153, 113);
             this.pictureBox12.TabIndex = 0;
             this.pictureBox12.TabStop = false;
+            this.pictureBox12.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox13
             // 
@@ -201,6 +251,7 @@ namespace Lab_5
             this.pictureBox13.Size = new System.Drawing.Size(153, 113);
             this.pictureBox13.TabIndex = 0;
             this.pictureBox13.TabStop = false;
+            this.pictureBox13.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox14
             // 
@@ -209,6 +260,7 @@ namespace Lab_5
             this.pictureBox14.Size = new System.Drawing.Size(153, 113);
             this.pictureBox14.TabIndex = 0;
             this.pictureBox14.TabStop = false;
+            this.pictureBox14.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox15
             // 
@@ -217,6 +269,7 @@ namespace Lab_5
             this.pictureBox15.Size = new System.Drawing.Size(153, 113);
             this.pictureBox15.TabIndex = 0;
             this.pictureBox15.TabStop = false;
+            this.pictureBox15.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox16
             // 
@@ -225,6 +278,7 @@ namespace Lab_5
             this.pictureBox16.Size = new System.Drawing.Size(153, 113);
             this.pictureBox16.TabIndex = 0;
             this.pictureBox16.TabStop = false;
+            this.pictureBox16.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox17
             // 
@@ -233,6 +287,7 @@ namespace Lab_5
             this.pictureBox17.Size = new System.Drawing.Size(153, 113);
             this.pictureBox17.TabIndex = 0;
             this.pictureBox17.TabStop = false;
+            this.pictureBox17.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox18
             // 
@@ -241,6 +296,7 @@ namespace Lab_5
             this.pictureBox18.Size = new System.Drawing.Size(153, 113);
             this.pictureBox18.TabIndex = 0;
             this.pictureBox18.TabStop = false;
+            this.pictureBox18.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox19
             // 
@@ -249,6 +305,7 @@ namespace Lab_5
             this.pictureBox19.Size = new System.Drawing.Size(153, 113);
             this.pictureBox19.TabIndex = 0;
             this.pictureBox19.TabStop = false;
+            this.pictureBox19.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox20
             // 
@@ -257,6 +314,7 @@ namespace Lab_5
             this.pictureBox20.Size = new System.Drawing.Size(153, 113);
             this.pictureBox20.TabIndex = 0;
             this.pictureBox20.TabStop = false;
+            this.pictureBox20.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox21
             // 
@@ -265,6 +323,7 @@ namespace Lab_5
             this.pictureBox21.Size = new System.Drawing.Size(153, 113);
             this.pictureBox21.TabIndex = 0;
             this.pictureBox21.TabStop = false;
+            this.pictureBox21.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox22
             // 
@@ -273,6 +332,7 @@ namespace Lab_5
             this.pictureBox22.Size = new System.Drawing.Size(153, 113);
             this.pictureBox22.TabIndex = 0;
             this.pictureBox22.TabStop = false;
+            this.pictureBox22.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox23
             // 
@@ -281,6 +341,7 @@ namespace Lab_5
             this.pictureBox23.Size = new System.Drawing.Size(153, 113);
             this.pictureBox23.TabIndex = 0;
             this.pictureBox23.TabStop = false;
+            this.pictureBox23.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox24
             // 
@@ -289,6 +350,7 @@ namespace Lab_5
             this.pictureBox24.Size = new System.Drawing.Size(153, 113);
             this.pictureBox24.TabIndex = 0;
             this.pictureBox24.TabStop = false;
+            this.pictureBox24.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox25
             // 
@@ -297,6 +359,7 @@ namespace Lab_5
             this.pictureBox25.Size = new System.Drawing.Size(153, 113);
             this.pictureBox25.TabIndex = 0;
             this.pictureBox25.TabStop = false;
+            this.pictureBox25.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox26
             // 
@@ -305,6 +368,7 @@ namespace Lab_5
             this.pictureBox26.Size = new System.Drawing.Size(153, 113);
             this.pictureBox26.TabIndex = 0;
             this.pictureBox26.TabStop = false;
+            this.pictureBox26.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox27
             // 
@@ -313,6 +377,7 @@ namespace Lab_5
             this.pictureBox27.Size = new System.Drawing.Size(153, 113);
             this.pictureBox27.TabIndex = 0;
             this.pictureBox27.TabStop = false;
+            this.pictureBox27.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox28
             // 
@@ -321,6 +386,7 @@ namespace Lab_5
             this.pictureBox28.Size = new System.Drawing.Size(153, 113);
             this.pictureBox28.TabIndex = 0;
             this.pictureBox28.TabStop = false;
+            this.pictureBox28.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox29
             // 
@@ -329,6 +395,7 @@ namespace Lab_5
             this.pictureBox29.Size = new System.Drawing.Size(153, 113);
             this.pictureBox29.TabIndex = 0;
             this.pictureBox29.TabStop = false;
+            this.pictureBox29.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // pictureBox30
             // 
@@ -337,6 +404,7 @@ namespace Lab_5
             this.pictureBox30.Size = new System.Drawing.Size(153, 113);
             this.pictureBox30.TabIndex = 0;
             this.pictureBox30.TabStop = false;
+            this.pictureBox30.MouseClick += new System.Windows.Forms.MouseEventHandler(this.picturebox_MouseClick);
             // 
             // timer1
             // 
@@ -344,10 +412,20 @@ namespace Lab_5
             this.timer1.Interval = 4000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(403, 310);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(46, 17);
+            this.label1.TabIndex = 1;
+            this.label1.Text = "label1";
+            // 
             // Task3
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.pictureBox30);
             this.Controls.Add(this.pictureBox25);
             this.Controls.Add(this.pictureBox20);
@@ -378,6 +456,7 @@ namespace Lab_5
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
+            this.Enabled = false;
             this.Name = "Task3";
             this.Size = new System.Drawing.Size(1255, 795);
             this.Load += new System.EventHandler(this.Task3_Load);
@@ -412,6 +491,7 @@ namespace Lab_5
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox29)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox30)).EndInit();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -448,5 +528,6 @@ namespace Lab_5
         public System.Windows.Forms.PictureBox pictureBox29;
         public System.Windows.Forms.PictureBox pictureBox30;
         private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label label1;
     }
 }
