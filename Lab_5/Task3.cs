@@ -54,6 +54,7 @@ namespace Lab_5
             dr28 = new Drawing();
             dr29 = new Drawing();
             dr30 = new Drawing();
+            timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)

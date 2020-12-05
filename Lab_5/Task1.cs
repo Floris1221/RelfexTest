@@ -27,8 +27,8 @@ namespace Lab_5.Test
             {
                 timer1.Stop();
                 timer1.Enabled = false;
-                timer1.Dispose();
-                z = 0;
+                this.Enabled = false;
+                this.Visible = false;
             }
             else
             {
@@ -37,7 +37,6 @@ namespace Lab_5.Test
                 watch.Start();
             }
         }
-        //Zabezpieczyć przed przedwczesnym kliknieciem!!!
 
         private void UserControl1_KeyPress(object sender, KeyPressEventArgs e)
         {

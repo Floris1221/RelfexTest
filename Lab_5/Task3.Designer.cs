@@ -408,7 +408,6 @@ namespace Lab_5
             // 
             // timer1
             // 
-            this.timer1.Enabled = true;
             this.timer1.Interval = 4000;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
@@ -456,7 +455,6 @@ namespace Lab_5
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.pictureBox2);
             this.Controls.Add(this.pictureBox1);
-            this.Enabled = false;
             this.Name = "Task3";
             this.Size = new System.Drawing.Size(1255, 795);
             this.Load += new System.EventHandler(this.Task3_Load);

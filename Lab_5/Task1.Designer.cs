@@ -48,7 +48,6 @@ namespace Lab_5.Test
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.DimGray;
-            this.Enabled = false;
             this.Name = "Task1";
             this.Size = new System.Drawing.Size(1255, 814);
             this.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.UserControl1_KeyPress);

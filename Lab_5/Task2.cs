@@ -150,7 +150,6 @@ namespace Lab_5
             this.panel3.BackgroundImage = bmp_b_r;
             this.panel4.BackgroundImage = bmp_b_l;
             timer1.Start();
-
         }
 
 
