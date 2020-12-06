@@ -25,3 +25,4 @@ C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task11.resources
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task22.resources
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task33.resources
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task44.resources
+C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Wyniki.resources

@@ -9,6 +9,7 @@
         Task22 task2;
         Task33 task3;
         Task44 task4;
+        Wyniki wynik;
         public long[] seria1 = new long[4];
         public long[] seria2 = new long[4];
         public long[] seria3 = new long[4];

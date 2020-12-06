@@ -135,8 +135,8 @@ namespace Lab_5
                 {
                     this.panel4.BackgroundImage = bmp_r_l;
                 }
-
                 watch.Start();
+
             }
             if (blad == 2)
             {
@@ -148,6 +148,7 @@ namespace Lab_5
 
         private void Task22_KeyPress(object sender, KeyPressEventArgs e)
         {
+            watch.Stop();
             timer1.Start();
             if ((panel1.BackgroundImage == bmp_g_u && e.KeyChar == 'w') || (panel2.BackgroundImage == bmp_g_d && e.KeyChar == 's') || (panel3.BackgroundImage == bmp_g_r && e.KeyChar == 'd') || (panel4.BackgroundImage == bmp_g_l && e.KeyChar == 'a'))
             {
@@ -167,6 +168,8 @@ namespace Lab_5
                     else
                         MessageBox.Show("Błąd. To była ostatnia próba. Test niezaliczony");
                     blad++;
+                    podejscie = 0;
+                    proba = 0;
                 }
                 else
                 {
@@ -176,7 +179,7 @@ namespace Lab_5
                 proba = 0;
             }
 
-            watch.Stop();
+            watch.Reset();
 
             //Ustawienie poczatkowe
             this.panel1.BackgroundImage = bmp_b_u;

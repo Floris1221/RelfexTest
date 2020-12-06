@@ -70,6 +70,8 @@ namespace Lab_5
                     else
                         MessageBox.Show("Błąd. To była ostatnia próba. Test niezaliczony");
                     blad++;
+                    z = 0;
+                    proba = 0;
                 }
                 else
                 {

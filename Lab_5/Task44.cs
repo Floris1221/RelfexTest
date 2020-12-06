@@ -73,6 +73,8 @@ namespace Lab_5
                     else
                      MessageBox.Show("Błąd. To była ostatnia próba. Test niezaliczony");
                     blad++;
+                    podejscie = 0;
+                    proba = 0;
                 }
                 else
                 {
@@ -82,6 +84,7 @@ namespace Lab_5
                 proba = 0;
                 label2.Text = "Błąd";
             }
+            watch.Reset();
             timer1.Start();
         }
 

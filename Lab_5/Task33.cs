@@ -73,7 +73,7 @@ namespace Lab_5
             else
             {
                 timer1.Stop();
-                zielony = rand.Next(30);
+                zielony = rand.Next(28);
                 figura = rand.Next(4);
                 int i;
                 int j;
@@ -178,13 +178,16 @@ namespace Lab_5
                 fr.Visible = true;
             }
         }
+
+
+
         private void pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
-            for(int i = 0; i < picbox.Length; i++)
+            watch.Stop();
+            for (int i = 0; i < picbox.Length; i++)
             {
                 picbox[i].Image = null;
             }
-            watch.Stop();
             if (picbox[zielony] == sender)
             {
                 label1.Text = "Dobrze";
@@ -204,6 +207,8 @@ namespace Lab_5
                     else
                         MessageBox.Show("Błąd. To była ostatnia próba. Test niezaliczony");
                     blad++;
+                    podejscie = 0;
+                    proba = 0;
                 }
                 else
                 {
@@ -214,6 +219,7 @@ namespace Lab_5
                 label1.Text = "Błąd";
 
             }
+            watch.Reset();
             timer1.Start();
         }
 
