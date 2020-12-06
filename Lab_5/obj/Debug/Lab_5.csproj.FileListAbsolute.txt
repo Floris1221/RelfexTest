@@ -17,10 +17,11 @@ C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.csprojAssemblyRefere
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Form1.resources
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Form2.resources
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Properties.Resources.resources
-C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Test.Task1.resources
-C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task2.resources
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.csproj.GenerateResource.cache
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.csproj.CoreCompileInputs.cache
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.exe
 C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.pdb
-C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task3.resources
+C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task11.resources
+C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task22.resources
+C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task33.resources
+C:\Users\Acer\source\repos\RelfexTest\Lab_5\obj\Debug\Lab_5.Task44.resources

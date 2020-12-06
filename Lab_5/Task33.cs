@@ -1,8 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Drawing;
 using System.Data;
+using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -10,19 +10,18 @@ using System.Windows.Forms;
 
 namespace Lab_5
 {
-    public partial class Task3 : UserControl
+    public partial class Task33 : Form
     {
-
-        public Task3()
+        public Task33(Form2 fr)
         {
             InitializeComponent();
+            this.fr = fr;
             zielony = 0;
             figura = 0;
-            proba = 0;
-            picbox =new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24, pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox29, pictureBox30 };
+            picbox = new PictureBox[] { pictureBox1, pictureBox2, pictureBox3, pictureBox4, pictureBox5, pictureBox6, pictureBox7, pictureBox8, pictureBox9, pictureBox10, pictureBox11, pictureBox12, pictureBox13, pictureBox14, pictureBox15, pictureBox16, pictureBox17, pictureBox18, pictureBox19, pictureBox20, pictureBox21, pictureBox22, pictureBox23, pictureBox24, pictureBox25, pictureBox26, pictureBox27, pictureBox28, pictureBox13, pictureBox18 };
         }
 
-        private void Task3_Load(object sender, EventArgs e)
+        private void Task33_Load(object sender, EventArgs e)
         {
             dr1 = new Drawing();
             dr2 = new Drawing();
@@ -52,21 +51,41 @@ namespace Lab_5
             dr26 = new Drawing();
             dr27 = new Drawing();
             dr28 = new Drawing();
-            dr29 = new Drawing();
-            dr30 = new Drawing();
-            timer1.Enabled = true;
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            if (proba < 6)
+            if (podejscie == 8)
+            {
+                timer1.Stop();
+                timer1.Enabled = false;
+                this.Close();
+                fr.Visible = true;
+            }
+            else if(podejscie == 3)
+            {
+                timer1.Stop();
+                label2.Visible = true;
+                button1.Visible = true;
+                podejscie++; ;
+                label1.Text = null;
+            }
+            else
             {
                 timer1.Stop();
                 zielony = rand.Next(30);
                 figura = rand.Next(4);
                 int i;
                 int j;
-                this.label1.Text = "Znajdź zielony " + figura.ToString() + "Jest na pozycji" + zielony.ToString();
+                if (figura == 0)
+                    s = "Kwadrat";
+                else if (figura == 1)
+                    s = "Koło";
+                else if (figura == 2)
+                    s = "Trójkąt";
+                else if (figura == 3)
+                    s = "Pięciobok";
+                this.label1.Text = "Znajdź zielony " + s;
                 i = rand.Next(4);
                 j = rand.Next(4);
                 pictureBox1.Image = dr1.draw(this, i, j);
@@ -151,36 +170,59 @@ namespace Lab_5
                 i = rand.Next(4);
                 j = rand.Next(4);
                 pictureBox28.Image = dr28.draw(this, i, j);
-                i = rand.Next(4);
-                j = rand.Next(4);
-                pictureBox29.Image = dr29.draw(this, i, j);
-                i = rand.Next(4);
-                j = rand.Next(4);
-                pictureBox30.Image = dr30.draw(this, i, j);
                 watch.Start();
             }
-            else
+            if (blad == 2)
             {
-                timer1.Stop();
-                MessageBox.Show("Koniec!!!");
+                this.Close();
+                fr.Visible = true;
             }
         }
-
-        private void picturebox_MouseClick(object sender, MouseEventArgs e)
+        private void pictureBox_MouseClick(object sender, MouseEventArgs e)
         {
+            for(int i = 0; i < picbox.Length; i++)
+            {
+                picbox[i].Image = null;
+            }
             watch.Stop();
             if (picbox[zielony] == sender)
             {
-                proba++;
-                MessageBox.Show("Dobrze");
+                label1.Text = "Dobrze";
+                podejscie++;
+                if (podejscie > 3)
+                {
+                    fr.seria3[proba] = watch.ElapsedMilliseconds;
+                    proba++;
+                }
             }
             else
             {
+                if (podejscie > 3)
+                {
+                    if(blad==0)
+                    MessageBox.Show("Błąd. Pozostała ostatnia próba. Zacznij od nowa. Przed Tobą ponownie 3 próby instruktarzowe.");
+                    else
+                        MessageBox.Show("Błąd. To była ostatnia próba. Test niezaliczony");
+                    blad++;
+                }
+                else
+                {
+                    MessageBox.Show("Błąd. Zacznij instruktarz od nowa");
+                }
+                podejscie = 0;
                 proba = 0;
-                MessageBox.Show("Błąd zacznij od nowa");
+                label1.Text = "Błąd";
+
             }
             timer1.Start();
+        }
 
+        private void button1_Click(object sender, EventArgs e)
+        {
+            timer1.Start();
+            label2.Visible = false;
+            button1.Visible = false;
+            this.Focus();
         }
     }
 }

@@ -19,7 +19,7 @@ namespace Lab_5
             nr = q;
             q++;
         }
-        public Bitmap draw(Task3 task,int i, int j)
+        public Bitmap draw(Task33 task,int i, int j)
         {
             if(task.zielony == nr)
             {
