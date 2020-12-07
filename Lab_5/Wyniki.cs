@@ -21,7 +21,7 @@ namespace Lab_5
         private void Wyniki_Load(object sender, EventArgs e)
         {
             label27.ForeColor = Color.DarkGreen;
-            label28.ForeColor = Color.Green;
+            label28.ForeColor = Color.LightSeaGreen;
             label29.ForeColor = Color.Yellow;
             label30.ForeColor = Color.Red;
             label31.ForeColor = Color.DarkRed;
@@ -57,26 +57,39 @@ namespace Lab_5
             label20.Text = fr.seria3[3].ToString();
 
             //Wyniki zadanie 4
-            kolor(4, fr.seria3[0], label22);
+            kolor(4, fr.seria4[0], label22);
             label22.Text = fr.seria4[0].ToString();
-            kolor(4, fr.seria3[1], label23);
+            kolor(4, fr.seria4[1], label23);
             label23.Text = fr.seria4[1].ToString();
-            kolor(4, fr.seria3[2], label24);
+            kolor(4, fr.seria4[2], label24);
             label24.Text = fr.seria4[2].ToString();
-            kolor(4, fr.seria3[3], label26);
+            kolor(4, fr.seria4[3], label26);
             label26.Text = fr.seria4[3].ToString();
+
+            //Srednia
+            kolor(1, srednia(fr.seria1), label33);
+            label33.Text = srednia(fr.seria1).ToString();
+
+            kolor(2, srednia(fr.seria2), label34);
+            label34.Text = srednia(fr.seria2).ToString();
+
+            kolor(3, srednia(fr.seria3), label35);
+            label35.Text = srednia(fr.seria3).ToString();
+
+            kolor(4, srednia(fr.seria4), label36);
+            label36.Text = srednia(fr.seria4).ToString();
 
 
         }
 
-        public static void kolor(int x,long l,Label label)
+        public void kolor(int x,long l,Label label)
         {
             if (x == 1)
             {
                 if (l < 400)
                     label.ForeColor = Color.DarkGreen;
                 else if(l<800)
-                    label.ForeColor = Color.LightGreen;
+                    label.ForeColor = Color.LightSeaGreen;
                 else if(l<1000)
                     label.ForeColor = Color.Yellow;
                 else if(l<1200)
@@ -84,12 +97,12 @@ namespace Lab_5
                 else if(l>=1200)
                     label.ForeColor = Color.DarkRed;
             }//if(1)
-            if (x == 2)
+            else if (x == 2)
             {
                 if (l < 500)
                     label.ForeColor = Color.DarkGreen;
                 else if (l < 900)
-                    label.ForeColor = Color.LightGreen;
+                    label.ForeColor = Color.LightSeaGreen;
                 else if (l < 1200)
                     label.ForeColor = Color.Yellow;
                 else if (l < 1500)
@@ -97,12 +110,12 @@ namespace Lab_5
                 else if (l >= 1500)
                     label.ForeColor = Color.DarkRed;
             }//if(2)
-            if (x == 3)
+            else if (x == 3)
             {
                 if (l < 1800)
                     label.ForeColor = Color.DarkGreen;
                 else if (l < 2200)
-                    label.ForeColor = Color.LightGreen;
+                    label.ForeColor = Color.LightSeaGreen;
                 else if (l < 3000)
                     label.ForeColor = Color.Yellow;
                 else if (l < 3700)
@@ -110,21 +123,30 @@ namespace Lab_5
                 else if (l >= 3700)
                     label.ForeColor = Color.DarkRed;
             }//if(3)
-            if (x == 4)
+            else if (x == 4)
             {
                 if (l < 600)
                     label.ForeColor = Color.DarkGreen;
                 else if (l < 900)
-                    label.ForeColor = Color.LightGreen;
-                else if (l < 1200)
+                    label.ForeColor = Color.LightSeaGreen;
+                else if (l < 1300)
                     label.ForeColor = Color.Yellow;
-                else if (l < 1600)
+                else if (l < 1900)
                     label.ForeColor = Color.Red;
-                else if (l >= 1600)
+                else if (l >= 1900)
                     label.ForeColor = Color.DarkRed;
             }//if(4)
-
         }//kolor
+
+        public long srednia(long[] seria)
+        {
+            long sr = 0;
+            for(int i=0; i < seria.Length; i++)
+            {
+                sr =sr + seria[i];
+            }
+            return sr / seria.Length;
+        }
 
         private void button1_Click(object sender, EventArgs e)
         {

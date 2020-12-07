@@ -23,9 +23,9 @@ namespace Lab_5
         private void Task22_Load(object sender, EventArgs e)
         {
             //wczytanie srzałek
-            black_arrow = Image.FromFile("C:\\Users\\Acer\\OneDrive\\Pulpit\\Arrow.png");
-            green_arrow = Image.FromFile("C:\\Users\\Acer\\OneDrive\\Pulpit\\Green_Arrow.png");
-            red_arrow = Image.FromFile("C:\\Users\\Acer\\OneDrive\\Pulpit\\Red_Arrow.png");
+            black_arrow = Image.FromFile(".\\Arrow.png");
+            green_arrow = Image.FromFile(".\\Green_Arrow.png");
+            red_arrow = Image.FromFile(".\\Red_Arrow.png");
             bmp_r_d = new Bitmap(red_arrow, 70, 70);
 
 

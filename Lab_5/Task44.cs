@@ -41,8 +41,8 @@ namespace Lab_5
             else
             {
                 timer1.Stop();
-                watch.Start();
                 SystemSounds.Beep.Play();
+                watch.Start();
             }
             if (blad == 2)
             {
@@ -57,7 +57,6 @@ namespace Lab_5
             {
                 watch.Stop();
                 podejscie++;
-                label2.Text = "Dobrze";
                 if (podejscie > 3)
                 {
                     fr.seria4[proba] = watch.ElapsedMilliseconds;
@@ -66,6 +65,7 @@ namespace Lab_5
             }
             else
             {
+                watch.Stop();
                 if (podejscie > 3)
                 {
                     if(blad==0)
